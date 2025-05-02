@@ -218,33 +218,11 @@ elif sectiune == "Proiecte":
     în ceea ce privește creșterea duratei de viață”**.  
     Am contribuit la analizarea ciclurilor de încărcare/descărcare și la modelarea impactului regimurilor dinamice asupra durabilității sistemelor de stocare.
     """)
-
-    st.subheader("🦯 Baston inteligent pentru nevăzători")
-    st.write("""
-    Dispozitiv de asistență pentru nevăzători, bazat pe senzori de proximitate ultrasonică.  
-    Proiectul integrează un buzzer pentru avertizare sonoră, un motor vibrator pentru semnale tactile și un LED pentru condiții de luminozitate scăzută.  
-    Platforma de dezvoltare: Arduino UNO + senzor HC-SR04 + modul vibratii.  
-    🔗 [GitHub - Baston inteligent](https://github.com/exemplu/baston)
-    """)
-
-    st.subheader("💧 Monitorizare umiditate cu ESP32")
-    st.write("""
-    Sistem automatizat pentru irigarea plantelor pe baza măsurătorilor de umiditate a solului.  
-    Folosește un senzor capacitiv conectat la o placă **ESP32-C3-DevKitM**, care trimite date prin Wi-Fi.  
-    Include logica de declanșare a unei pompe de apă și stocarea valorilor în cloud/local.  
-    🔗 [GitHub - Umiditate sol](https://github.com/exemplu/umiditate)
-    """)
-
     st.subheader("🛠️ Proiecte în desfășurare")
     st.markdown("""
     - 📊 **Generator documente orar facultate (Python + Streamlit)**  
     Aplicație web care generează orare în format Excel pe baza datelor introduse de utilizator (zile, intervale orare, materii, grupe, profesori).  
     Include autentificare, salvare a orarelor în bază de date și interfață intuitivă.
-
-    - 📄 **Aplicație online pentru generare CV (Python + Streamlit)**  
-    Aplicație interactivă care permite completarea unui formular și generarea automată a unui CV profesional în format PDF.  
-    Design personalizabil și export instant.
-
     - 🍷 **Etilotest – circuit electronic**  
     Proiect hardware în curs, pentru măsurarea alcoolemiei cu ajutorul senzorului MQ-3.  
     Afișaj digital al valorilor și avertizare LED pentru depășirea pragului critic.  
