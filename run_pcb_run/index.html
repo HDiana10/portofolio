@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PCB Runner</title>
+  <style>
+    body { margin: 0; background: #fff; overflow: hidden; }
+    canvas { display: block; margin: auto; background: #f4f4f4; border: 2px solid #333; }
+  </style>
+</head>
+<body>
+<canvas id="gameCanvas" width="800" height="200"></canvas>
+
+<script>
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+const GROUND_Y = 110; // aliniere bună vizual
+
+// PCB (player)
+let pcb = {
+  x: 50,
+  y: GROUND_Y,
+  width: 70,
+  height: 70,
+  velocityY: 0,
+  gravity: 0.8,   // 🟢 gravitație mai mică => zboară mai mult
+  isJumping: false
+};
+
+
+// Obstacle
+let obstacle = {
+  x: 800,
+  y: GROUND_Y + 20,  // puțin mai jos decât GROUND_Y vizual
+  width: 50,
+  height: 50,
+  height: 50,
+  speed: 2
+};
+
+let score = 0;
+let gameOver = false;
+let bgX = 0;
+
+// Images
+const pcbImg = new Image();
+pcbImg.src = 'pcb.png';
+
+const blockImg = new Image();
+blockImg.src = 'block_rezistor.png';
+
+const bgImg = new Image();
+bgImg.src = 'background.png';
+
+// Săritură
+document.addEventListener('keydown', (e) => {
+  if (!pcb.isJumping && !gameOver) {
+    pcb.velocityY = -16; // ajustat pentru greutate mai realistă
+    pcb.isJumping = true;
+  }
+});
+
+function resetGame() {
+  obstacle.x = 800;
+  obstacle.speed = 5;
+  score = 0;
+  gameOver = false;
+  pcb.y = GROUND_Y;
+  pcb.velocityY = 0;
+  pcb.isJumping = false;
+}
+
+function update() {
+  if (gameOver) {
+    obstacle.speed = 4;
+    return;}
+
+  // Gravitație
+  pcb.y += pcb.velocityY;
+  pcb.velocityY += pcb.gravity;
+  if (pcb.y >= GROUND_Y) {
+    pcb.y = GROUND_Y;
+    pcb.velocityY = 0;
+    pcb.isJumping = false;
+  }
+
+  // Fundal scroll
+  bgX -= 2;
+  if (bgX <= -800) bgX = 0;
+
+  // Obstacol
+  obstacle.x -= obstacle.speed;
+  if (obstacle.x + obstacle.width < 0) {
+    obstacle.x = 800 + Math.random() * 200;
+    score++;
+
+    if (obstacle.speed < 14) {
+      obstacle.speed += 0.4; // crește treptat
+    }
+  }
+
+  // Coliziune
+  if (
+    pcb.x < obstacle.x + obstacle.width &&
+    pcb.x + pcb.width > obstacle.x &&
+    pcb.y < obstacle.y + obstacle.height &&
+    pcb.y + pcb.height > obstacle.y
+  ) {
+    gameOver = true;
+    setTimeout(resetGame, 2000);
+  }
+}
+
+pcbImg.onload = function() {
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Fundal
+    ctx.drawImage(bgImg, bgX, 0, 800, 200);
+    ctx.drawImage(bgImg, bgX + 800, 0, 800, 200);
+
+    // PCB
+    ctx.drawImage(pcbImg, pcb.x, pcb.y, pcb.width, pcb.height);
+
+    // Obstacol
+    ctx.drawImage(blockImg, obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+
+    // Scor
+    ctx.fillStyle = "#000";
+    ctx.font = "22px Arial";
+    ctx.textAlign = "right";
+    ctx.fillText("Score: " + score, canvas.width - 20, 30);
+
+    if (gameOver) {
+      ctx.fillStyle = "red";
+      ctx.font = "40px Arial";
+      ctx.textAlign = "center";
+      ctx.fillText("Game Over", canvas.width / 2, 100);
+    }
+  }
+
+  function loop() {
+    update();
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  loop();
+};
+</script>
+</body>
+</html>
