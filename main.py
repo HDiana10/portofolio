@@ -122,9 +122,8 @@ elif sectiune == "Voluntariat":
     st.subheader("🚀 Moon Camp Challenge & NASA Space Settlement Workshop")
     st.write("Oct. 2022 – Apr. 2023")
     st.markdown("""
-    - Predare curs de astrofizică pentru liceeni în cadrul proiectului ESA  
-    - Coordonare echipă și gestionarea comunicării proiectului  
-    🔗 [Detalii proiect](https://pubhtml5.com/flej/dqjq/)  
+    - Predarea modulului de astrofizică pentru liceeni  
+    - Coordonare echipă și gestionarea comunicării proiectului
         """)
     st.markdown("""
     <div style='font-size:16px'>
@@ -206,9 +205,7 @@ elif sectiune == "Proiecte":
     st.subheader("🎹 Pian electronic – Arduino")
     st.write("""
     Proiect hardware prezentat în cadrul sesiunii de comunicări științifice studențești.  
-    Pianul electronic folosește un buzzer piezoelectric și butoane conectate la un microcontroller Arduino.  
-    Fiecare buton este asociat unei frecvențe specifice pentru redarea notelor muzicale.  
-    Implementarea include cod pentru maparea tastelor și generarea sunetelor corecte.
+    Pianul electronic folosește un microcontroller Arduino UNO.
     """)
 
     st.subheader("🔋 Proiect MINERVA – CCP")
@@ -222,7 +219,7 @@ elif sectiune == "Proiecte":
     st.markdown("""
     - 📊 **Generator documente orar facultate (Python + Streamlit)**  
     Aplicație web care generează orare în format Excel pe baza datelor introduse de utilizator (zile, intervale orare, materii, grupe, profesori).  
-    Include autentificare, salvare a orarelor în bază de date și interfață intuitivă.
+    Include autentificare, salvare a orarelor în baza de date și interfață intuitivă.
     - 🍷 **Etilotest – circuit electronic**  
     Proiect hardware în curs, pentru măsurarea alcoolemiei cu ajutorul senzorului MQ-3.  
     Afișaj digital al valorilor și avertizare LED pentru depășirea pragului critic.  
@@ -232,18 +229,30 @@ elif sectiune == "Proiecte":
 # ---------------- CONCURSURI ----------------
 elif sectiune == "Concursuri":
     st.header("🏆 Concursuri")
-    st.subheader("Hackathon ABC - Locul 2")
-    st.write("Am realizat o aplicație mobilă pentru orientare în spațiu destinată persoanelor nevăzătoare.")
-    st.subheader("Olimpiada Națională de Informatică - Etapa județeană")
-    st.write("Mențiune - 2021")
+    st.subheader("Electron 2025")
+    st.write("Locul 7")
+    st.subheader("Pia Hunt 2024")
+    st.write("Mențiune")
+    st.subheader("ESA Moon Camp Challenge 2022")
+    st.write("Locul 3, Pioneers")
 
 # ---------------- COMPETENȚE ----------------
 elif sectiune == "Competențe":
     st.header("🛠️ Competențe")
     st.write("""
-    - Limbaje de programare: Python, C/C++, JavaScript
-    - Tehnologii: Streamlit, Flask, Git, Arduino, ESP32
-    - Altele: lucru în echipă, gândire algoritmică, comunicare
+    - Limbaje de programare: Python, C/C++, Arduino
+    - Instrumente de dezvoltare: PyCharm, GitHub, Arduino IDE
+    - Electronică și hardware: Arduino UNO, ESP32, ESP nano
+    - Design UI/UX: Design de interfață pentru aplicații desktop
+    - Limbi străine: Română (nativă), engleză (avansată), franceză (începător)
+    - Lucru în echipă și colaborare - A lucrat eficient în proiecte studențești, echipe de voluntariat și inițiative științifice
+    - Comunicare - A prezentat conținut tehnic în mod clar publicului academic; a coordonat voluntari și a condus întâlniri
+    - Leadership - Și-a asumat roluri precum lider de proiect și jurnalist în cadrul organizațiilor de voluntariat
+    - Adaptabilitate - A învățat rapid noi instrumente și tehnologii precum Python, GitHub și Arduino IDE
+    - Rezolvarea problemelor - A făcut față provocărilor tehnice în proiectele de dezvoltare electronică și software
+    - Gândire critică - A analizat sistemele de baterii și a contribuit la luarea deciziilor bazate pe cercetare
+    - Creativitate - A proiectat interfețe ușor de utilizat și a participat la activități de comunicare științifică
+    - Inițiativă - Implicare proactivă în concursuri, școli de excelență și provocări tehnice extracurriculare
     """)
 
 # ---------------- FOOTER ----------------
