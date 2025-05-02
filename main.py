@@ -244,7 +244,6 @@ elif sectiune == "Competențe":
     - Instrumente de dezvoltare: PyCharm, GitHub, Arduino IDE
     - Electronică și hardware: Arduino UNO, ESP32, ESP nano
     - Design UI/UX: Design de interfață pentru aplicații desktop
-    - Limbi străine: Română (nativă), engleză (avansată), franceză (începător)
     - Lucru în echipă și colaborare - A lucrat eficient în proiecte studențești, echipe de voluntariat și inițiative științifice
     - Comunicare - A prezentat conținut tehnic în mod clar publicului academic; a coordonat voluntari și a condus întâlniri
     - Leadership - Și-a asumat roluri precum lider de proiect și jurnalist în cadrul organizațiilor de voluntariat
