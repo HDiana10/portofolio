@@ -182,7 +182,7 @@ elif sectiune == "Proiecte":
     st.header("💻 Proiecte")
 
     st.subheader("🕹️ PCB Runner – MiniGame (live din GitHub Pages)")
-    st.write("Joc endless runner cu dinozaur PCB. Sari peste obstacole electronice și adună puncte.")
+    st.write("Te-ai plictisit? =( Îmi pare rău, dar, hei, poți să te joci mai jos TrexRun varianta ETTI („Run, PCB, Run”). Am folosit HTML și JS pentru a face acest minigame, iar după l-am importat din github.")
 
     # Embed jocul din GitHub Pages
     components.iframe("https://hdiana10.github.io/run_pcb_run/", height=200, width=800)
