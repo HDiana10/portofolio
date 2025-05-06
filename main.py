@@ -32,14 +32,12 @@ if sectiune == "Profil":
         M-a interesat domeniul tehnologiei încă din copilărie, iar în prezent urmăresc să îmi consolidez cunoștințele și să evoluez într-o direcție profesională solidă în acest sector.
         Dorința de autodepășire mă motivează să ies din zona de confort și să îmi valorific potențialul la maxim.
 
-        Cinci cuvinte care mă definesc cel mai bine sunt:
-creativitate, punctualitate, seriozitate, perseverență și entuziasm.
+        Cinci cuvinte care mă definesc cel mai bine sunt: creativitate, punctualitate, seriozitate, perseverență și entuziasm.
 
-        Prietenii spun că aș fi și amuzantă — dar până nu apar
-dovezi concrete, rămân sceptică.
+        Prietenii spun că aș fi și amuzantă — dar până nu apar dovezi concrete, rămân sceptică.
 
 🔗[Références](https://drive.google.com/file/d/1yeUIgIPzS_gxczn4meM6x2Ygh-_WTife/view?usp=drivesdk)
-        """)
+    """)
 
     st.markdown("---")
 
