@@ -36,7 +36,6 @@ if sectiune == "Profil":
 
         Prietenii spun că aș fi și amuzantă — dar până nu apar dovezi concrete, rămân sceptică.
 
-🔗[Références](https://drive.google.com/file/d/1yeUIgIPzS_gxczn4meM6x2Ygh-_WTife/view?usp=drivesdk)
     """)
 
     st.markdown("---")
